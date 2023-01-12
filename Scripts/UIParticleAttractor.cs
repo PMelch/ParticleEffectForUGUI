@@ -84,6 +84,18 @@ namespace Coffee.UIExtensions
             }
         } 
         
+        public UnityEvent onAttracted
+        {
+            get
+            {
+                return m_OnAttracted;
+            }
+            set
+            {
+                m_OnAttracted = value;
+            }
+        } 
+        
         private UIParticle _uiParticle;
 
         private void OnEnable()
