@@ -72,6 +72,18 @@ namespace Coffee.UIExtensions
             }
         }
 
+        public ParticleSystem particleSystem
+        {
+            get
+            {
+                return m_ParticleSystem;
+            }
+            set
+            {
+                m_ParticleSystem = value;
+            }
+        } 
+        
         private UIParticle _uiParticle;
 
         private void OnEnable()
