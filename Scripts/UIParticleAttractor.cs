@@ -96,6 +96,18 @@ namespace Coffee.UIExtensions
             }
         } 
         
+        public float DestinationRadius
+        {
+            get
+            {
+                return m_DestinationRadius;
+            }
+            set
+            {
+                m_DestinationRadius = value;
+            }
+        } 
+        
         private UIParticle _uiParticle;
 
         private void OnEnable()
