@@ -57,6 +57,25 @@ namespace Coffee.UIExtensions
 
         private List<UIParticle> _uiParticles = new List<UIParticle>();
 
+        public float DestinationRadius
+        {
+            get => m_DestinationRadius;
+            set => m_DestinationRadius = value;
+        }
+
+        // Compatibility with callers that configure a single target.
+        public ParticleSystem particleSystem
+        {
+            get => m_ParticleSystems.Count > 0 ? m_ParticleSystems[0] : m_ParticleSystem;
+            set
+            {
+                m_ParticleSystem = null;
+                m_ParticleSystems.Clear();
+                _uiParticles.Clear();
+                if (value != null) AddParticleSystem(value);
+            }
+        }
+
         public float destinationRadius
         {
             get => m_DestinationRadius;
